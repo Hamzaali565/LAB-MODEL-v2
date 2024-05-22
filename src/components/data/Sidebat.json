@@ -1,0 +1,185 @@
+[
+  {
+    "title": "Lab",
+    "icon": "uil uil-flask-potion",
+    "childrens": [
+      {
+        "title": "Masters",
+        "childrens": [
+          {
+            "title": "Test",
+            "path": "/"
+          },
+          {
+            "title": "Group",
+            "path": "/"
+          },
+          {
+            "title": "Party Wise Lab Charges",
+            "path": "/"
+          },
+          {
+            "title": "Department Wise Remarks",
+            "path": "/"
+          },
+          {
+            "title": "Microbiology Refrences",
+            "path": "/"
+          },
+          {
+            "title": "Fixed Values",
+            "path": "/"
+          },
+          {
+            "title": "User Wise Department Mapping",
+            "path": "/"
+          },
+          {
+            "title": "Morphology",
+            "path": "/"
+          }
+        ]
+      },
+      {
+        "title": "Transaction",
+        "childrens": [
+          {
+            "title": "Test Booking / Payment Reciept",
+            "path": "/"
+          },
+          {
+            "title": "Test Requisition",
+            "path": "/"
+          },
+          {
+            "title": "Sample Collection",
+            "path": "/"
+          },
+          {
+            "title": "Sample Recieved",
+            "path": "/"
+          },
+          {
+            "title": "Laboratory Result Reversal",
+            "path": "/"
+          },
+          {
+            "title": "Laboratory Consumption",
+            "path": "/"
+          }
+        ]
+      },
+      {
+        "title": "Test Result",
+        "childrens": [
+          {
+            "title": "Biochemistry",
+            "path": "/"
+          },
+          {
+            "title": "Microbiology",
+            "path": "/"
+          },
+          {
+            "title": "Cytology",
+            "path": "/"
+          },
+          {
+            "title": "Chemical Pathology",
+            "path": "/"
+          },
+          {
+            "title": "Haematology",
+            "path": "/"
+          },
+          {
+            "title": "Serology",
+            "path": "/"
+          },
+          {
+            "title": "Parasitology",
+            "path": "/"
+          }
+        ]
+      },
+      {
+        "title": "Lab Results Edit",
+        "childrens": [
+          {
+            "title": "Biochemistry Edit",
+            "path": "/"
+          },
+          {
+            "title": "Microbiology Edit",
+            "path": "/"
+          },
+          {
+            "title": "Cytology Edit",
+            "path": "/"
+          },
+          {
+            "title": "Haematology Edit",
+            "path": "/"
+          },
+          {
+            "title": "Chemical Pathology Edit",
+            "path": "/"
+          },
+          {
+            "title": "Parasitology Edit",
+            "path": "/"
+          },
+          {
+            "title": "Serology Edit",
+            "path": "/"
+          }
+        ]
+      },
+      {
+        "title": "Reports",
+        "childrens": [
+          {
+            "title": "Test Traking Status",
+            "path": "/"
+          },
+          {
+            "title": "Bar-Code Re-Print",
+            "path": "/"
+          },
+          {
+            "title": "Test Status",
+            "path": "/"
+          },
+          {
+            "title": "Lab Report",
+            "path": "/"
+          },
+          {
+            "title": "Department Wise Pending Results",
+            "path": "/"
+          },
+          {
+            "title": "Revenue Statment",
+            "path": "/"
+          },
+          {
+            "title": "List Of Outstanding",
+            "path": "/"
+          },
+          {
+            "title": "Consumption Report",
+            "path": "/"
+          },
+          {
+            "title": "Test Wise Revenue",
+            "path": "/"
+          },
+          {
+            "title": "Consultant Wise Count",
+            "path": "/"
+          }
+        ]
+      }
+    ]
+  }
+]
