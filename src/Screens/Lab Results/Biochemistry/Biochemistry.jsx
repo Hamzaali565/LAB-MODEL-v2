@@ -5,6 +5,10 @@ import axios from "axios";
 import { useSelector } from "react-redux";
 import { ErrorAlert, SuccessAlert } from "../../../components/Alert/Alerts";
 import moment from "moment";
+import PdfLearning from "../../../components/ReactPDFLearning/PdfLearning";
+import { pdf } from "@react-pdf/renderer";
+import { v4 as uuidv4 } from "uuid";
+import PDFBiochemistry from "./PDFBiochemistry";
 
 const Biochemistry = () => {
   const [labNo, setLabNo] = useState("");
@@ -12,6 +16,12 @@ const Biochemistry = () => {
   const [labData, setLabData] = useState([]);
   const [detailsData, setDetailsData] = useState([]);
   const [labEntry, setLabEntry] = useState("");
+  const [myId, setMyId] = useState("");
+  const [resultData, setResultData] = useState([]);
+  const [text, setText] = useState([
+    { text: "Hamza Ali Chishti 12322", date: "20/12/2024" },
+  ]);
+
   const url = useSelector((state) => state.url);
   useEffect(() => {
     console.log("detailsData", detailsData);
@@ -39,8 +49,10 @@ const Biochemistry = () => {
     }
   };
 
-  const testDetails = async (test_id, age) => {
+  const testDetails = async (test_id, age, mainId) => {
     setDetailsData([]);
+    console.log("mainId", mainId);
+    setMyId(mainId);
     try {
       const response = await axios.get(
         `${url}/getranges?test_id=${test_id}&age=${age}`
@@ -74,11 +86,21 @@ const Biochemistry = () => {
         testRanges,
         testResult: labEntry,
         labNo,
+        mainId: myId,
       });
       setLoader(false);
       SuccessAlert({ text: "Data Created Successfully", timer: 1500 });
+      setResultData(createResultEntry.data.data);
+      setLabData([]);
+      setDetailsData([]);
+      setLabNo("");
       // Log the result
-      console.log("Result entry", createResultEntry);
+      console.log("Result entry", createResultEntry.data.data);
+
+      // Wait for state to update before calling handleButtonClick
+      setTimeout(() => {
+        handleButtonClick(createResultEntry.data.data);
+      }, 0);
     } catch (error) {
       console.log("Error in result entry", error);
       setLoader(false);
@@ -88,6 +110,23 @@ const Biochemistry = () => {
         ErrorAlert({ text: error.message, timer: 1500 });
       }
     }
+  };
+
+  const handleButtonClick = async (resultData) => {
+    console.log("resultData before PDF generation", resultData);
+
+    // Generate a unique key to force re-render
+    const key = uuidv4();
+
+    // Create a PDF document as a Blob
+    const blob = await pdf(
+      <PDFBiochemistry key={key} text={resultData} />
+    ).toBlob();
+
+    // Create a Blob URL and open it in a new tab
+    let url = URL.createObjectURL(blob);
+    window.open(url, "_blank");
+    url = "";
   };
 
   return (
@@ -105,6 +144,7 @@ const Biochemistry = () => {
                 <Input
                   type={"number"}
                   onChange={(e) => setLabNo(e.target.value)}
+                  placeholder={"Enter Lab No."}
                   onSubmit={GetLabData}
                 />
                 <Button title={"Enter"} onClick={GetLabData} />
@@ -141,7 +181,11 @@ const Biochemistry = () => {
                   <p
                     className="text-red-600 underline cursor-pointer font-bold"
                     onClick={() =>
-                      testDetails(items.test_id, labData[0].mrData[0].age)
+                      testDetails(
+                        items.test_id,
+                        labData[0].mrData[0].age,
+                        items._id
+                      )
                     }
                   >
                     Select
@@ -171,8 +215,9 @@ const Biochemistry = () => {
                 />
               </div>
             ))}
-          <div className="flex justify-center mt-4">
+          <div className="flex justify-center mt-4 gap-4">
             <Button title={"Save Result"} onClick={resultEntry} />
+            <Button title={"Print"} onClick={handleButtonClick} />
           </div>
         </div>
       </div>

@@ -32,8 +32,8 @@ function App() {
           {/* <DepartmentRemarks /> */}
           {/* <LabRegistration /> */}
           {/* <SampleCollection /> */}
-          {/* <Biochemistry /> */}
-          <PDFButton />
+          <Biochemistry />
+          {/* <PDFButton /> */}
         </div>
       </div>
     </div>
