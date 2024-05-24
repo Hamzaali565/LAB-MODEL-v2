@@ -26,17 +26,17 @@ const PDFBiochemistry = ({ text }) => {
   return (
     <Document>
       <MyPage>
+        <View>
+          <Text fixed style={styles.headC1}>
+            Patient Details
+          </Text>
+        </View>
         <View style={styles.head}>
-          <View>
-            <Text fixed style={styles.headC1}>
-              Patient Details
-            </Text>
-          </View>
           {/* Patient Details */}
           <View style={styles.headCNew}>
             <View style={styles.headC2}>
               <Text fixed style={[styles.font, { fontWeight: "bold" }]}>
-                Patient Name: Muhammad Hamza S/o Muhammad Farooq HAji Kharadi
+                Patient Name: {text.otherDetails[0].mrData[0].patientName}
               </Text>
               <Text fixed style={[styles.font, styles.ml1]}>
                 Gender: Male
@@ -78,6 +78,17 @@ const PDFBiochemistry = ({ text }) => {
         </View>
         {/* Department */}
         <Text style={styles.depHead}>Department Of Biochemistry</Text>
+        <View style={styles.tableHeader}>
+          <Text style={[styles.test]}>Test Name</Text>
+          <Text style={[styles.test2]}>Unit</Text>
+          <Text style={[styles.test]}>Normal Ranges</Text>
+        </View>
+        <Text style={styles.testHeading}>ICT MALARIA</Text>
+        <View style={styles.tableData}>
+          <Text style={[styles.test]}>ICT MALARIA</Text>
+          <Text style={[styles.test2]}>%%%</Text>
+          <Text style={[styles.test]}>(10 - 12) to (13 - 20)</Text>
+        </View>
       </MyPage>
     </Document>
   );
@@ -99,7 +110,7 @@ const styles = StyleSheet.create({
   },
   head: {
     border: "1px solid black",
-    marginTop: "10",
+    marginTop: "2",
     padding: "2",
   },
   headC1: {
@@ -108,6 +119,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#454545",
     textAlign: "center",
     padding: "2",
+    marginTop: "3",
   },
   headC2: {
     display: "flex",
@@ -138,13 +150,47 @@ const styles = StyleSheet.create({
   ml5: {
     marginRight: "120",
   },
+
   depHead: {
     border: "1px solid black",
     padding: "2",
     textAlign: "center",
-    marginTop: "3",
+    marginTop: "5",
     color: "white",
     backgroundColor: "#454545",
+  },
+  tableHeader: {
+    display: "flex",
+    flexDirection: "row",
+    backgroundColor: "#454545",
+    color: "white",
+    marginTop: "5",
+    padding: "4",
+    fontSize: "12",
+    alignItems: "center",
+  },
+  test: {
+    width: "40%",
+    textAlign: "center",
+  },
+  test2: {
+    width: "20%",
+    textAlign: "center",
+  },
+  testHeading: {
+    fontSize: "15",
+    textDecoration: "underline",
+    fontWeight: "bold",
+    marginVertical: "4",
+    paddingLeft: "3",
+  },
+  tableData: {
+    display: "flex",
+    flexDirection: "row",
+    marginTop: "5",
+    padding: "4",
+    fontSize: "12",
+    alignItems: "center",
   },
 });
 
