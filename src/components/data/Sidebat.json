@@ -8,35 +8,19 @@
         "childrens": [
           {
             "title": "Test",
-            "path": "/"
+            "path": "/test"
           },
           {
             "title": "Group",
-            "path": "/"
+            "path": "/group"
           },
           {
             "title": "Party Wise Lab Charges",
-            "path": "/"
+            "path": "/party-wise-lab-charges"
           },
           {
             "title": "Department Wise Remarks",
-            "path": "/"
-          },
-          {
-            "title": "Microbiology Refrences",
-            "path": "/"
-          },
-          {
-            "title": "Fixed Values",
-            "path": "/"
-          },
-          {
-            "title": "User Wise Department Mapping",
-            "path": "/"
-          },
-          {
-            "title": "Morphology",
-            "path": "/"
+            "path": "/department-wise-remarks"
           }
         ]
       },
@@ -44,28 +28,20 @@
         "title": "Transaction",
         "childrens": [
           {
-            "title": "Test Booking / Payment Reciept",
-            "path": "/"
+            "title": "Test Booking / Payment Receipt",
+            "path": "/test-booking"
           },
           {
             "title": "Test Requisition",
-            "path": "/"
+            "path": "/test-requisition"
           },
           {
             "title": "Sample Collection",
-            "path": "/"
-          },
-          {
-            "title": "Sample Recieved",
-            "path": "/"
+            "path": "/sample-collection"
           },
           {
             "title": "Laboratory Result Reversal",
-            "path": "/"
-          },
-          {
-            "title": "Laboratory Consumption",
-            "path": "/"
+            "path": "/laboratory-result-reversal"
           }
         ]
       },
@@ -74,31 +50,7 @@
         "childrens": [
           {
             "title": "Biochemistry",
-            "path": "/"
-          },
-          {
-            "title": "Microbiology",
-            "path": "/"
-          },
-          {
-            "title": "Cytology",
-            "path": "/"
-          },
-          {
-            "title": "Chemical Pathology",
-            "path": "/"
-          },
-          {
-            "title": "Haematology",
-            "path": "/"
-          },
-          {
-            "title": "Serology",
-            "path": "/"
-          },
-          {
-            "title": "Parasitology",
-            "path": "/"
+            "path": "/biochemistry"
           }
         ]
       },
@@ -107,31 +59,7 @@
         "childrens": [
           {
             "title": "Biochemistry Edit",
-            "path": "/"
-          },
-          {
-            "title": "Microbiology Edit",
-            "path": "/"
-          },
-          {
-            "title": "Cytology Edit",
-            "path": "/"
-          },
-          {
-            "title": "Haematology Edit",
-            "path": "/"
-          },
-          {
-            "title": "Chemical Pathology Edit",
-            "path": "/"
-          },
-          {
-            "title": "Parasitology Edit",
-            "path": "/"
-          },
-          {
-            "title": "Serology Edit",
-            "path": "/"
+            "path": "/biochemistry-edit"
           }
         ]
       },
@@ -139,44 +67,8 @@
         "title": "Reports",
         "childrens": [
           {
-            "title": "Test Traking Status",
-            "path": "/"
-          },
-          {
-            "title": "Bar-Code Re-Print",
-            "path": "/"
-          },
-          {
-            "title": "Test Status",
-            "path": "/"
-          },
-          {
             "title": "Lab Report",
-            "path": "/"
-          },
-          {
-            "title": "Department Wise Pending Results",
-            "path": "/"
-          },
-          {
-            "title": "Revenue Statment",
-            "path": "/"
-          },
-          {
-            "title": "List Of Outstanding",
-            "path": "/"
-          },
-          {
-            "title": "Consumption Report",
-            "path": "/"
-          },
-          {
-            "title": "Test Wise Revenue",
-            "path": "/"
-          },
-          {
-            "title": "Consultant Wise Count",
-            "path": "/"
+            "path": "/lab-report"
           }
         ]
       }

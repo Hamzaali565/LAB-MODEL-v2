@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const SidebarItems = ({ item }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +19,7 @@ const SidebarItems = ({ item }) => {
             }}
           ></i>
         </div>
-        {/* content inside sidebar*/}
+        {/* content inside sidebar */}
         <div className="sidebar-content">
           {item.childrens.map((child, i) => (
             <SidebarItems key={i} item={child} />
@@ -28,13 +29,15 @@ const SidebarItems = ({ item }) => {
     );
   } else {
     return (
-      <div className={isOpen ? "sidebar-item open" : "sidebar-item"}>
-        <div className="sidebar-title">
-          <span>
-            {item.icon && <i className={item.icon}></i>}
-            {item.title}
-          </span>
-        </div>
+      <div className="sidebar-item">
+        <Link to={item.path}>
+          <div className="sidebar-title">
+            <span>
+              {item.icon && <i className={item.icon}></i>}
+              {item.title}
+            </span>
+          </div>
+        </Link>
       </div>
     );
   }
