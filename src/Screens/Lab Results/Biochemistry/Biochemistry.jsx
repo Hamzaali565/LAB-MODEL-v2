@@ -196,30 +196,6 @@ const Biochemistry = () => {
               ))}
           </div>
         </div>
-        {/* Result Entry */}
-
-        <div className="border-2 p-4 mt-4">
-          <h1 className="text-center underline font-bold text-2xl">
-            Result Entry
-          </h1>
-
-          {detailsData.length > 0 &&
-            detailsData[0].testRanges.map((items, index) => (
-              <div className="flex justify-around flex-wrap mt-3 items-center">
-                <p>{index + 1}</p>
-                <p>{detailsData[0].testName}</p>
-                <p>{items?.normalRanges}</p>
-                <Input
-                  placeholder={"Enter Result"}
-                  onChange={(e) => setLabEntry(e.target.value)}
-                />
-              </div>
-            ))}
-          <div className="flex justify-center mt-4 gap-4">
-            <Button title={"Save Result"} onClick={resultEntry} />
-            <Button title={"Print"} onClick={handleButtonClick} />
-          </div>
-        </div>
       </div>
     </div>
   );

@@ -9,6 +9,7 @@ import LabRegistration from "./Screens/Lab Registration/LabRegistration";
 import SampleCollection from "./Screens/Sample Collection/SampleCollection";
 import Biochemistry from "./Screens/Lab Results/Biochemistry/Biochemistry";
 import PDFButton from "./components/ReactPDFLearning/PDFButton";
+import LabReport from "./Screens/Lab Report/LabReport";
 
 function App() {
   const [show, setShow] = useState(true);
@@ -32,7 +33,8 @@ function App() {
           {/* <DepartmentRemarks /> */}
           {/* <LabRegistration /> */}
           {/* <SampleCollection /> */}
-          <Biochemistry />
+          {/* <Biochemistry /> */}
+          <LabReport />
           {/* <PDFButton /> */}
         </div>
       </div>
