@@ -2,7 +2,7 @@ import { BASE_URL, SET_LOGIN, SET_LOGIN_TOGGLE } from "./actionType";
 
 const initialState = {
   login: null,
-  url: "http://localhost:3001/api/v1",
+  url: "https://hospital-managment-seven.vercel.app",
   toggle: null,
 };
 
